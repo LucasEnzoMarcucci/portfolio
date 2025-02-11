@@ -5,7 +5,7 @@ import { Github } from "lucide-react"
 
 export default function ProjectCards({ projects }) {
   return (
-    <div className="flex flex-row flex-wrap justify-center space-x-14">
+    <div className="flex flex-col space-y-14 space-x-0 flex-wrap items-center justify-center xl:flex-row xl:items-stretch xl:space-x-14 xl:space-y-0">
       {projects.map((project) => (
         <Card key={project.title} className="overflow-hidden max-w-md">
           <div className="relative aspect-video">
@@ -13,7 +13,9 @@ export default function ProjectCards({ projects }) {
               src={project.image}
               alt={project.title}
               fill
+              sizes="100%"
               className="object-cover"
+              priority={true}
             />
           </div>
           <CardContent className="px-4 py-5">

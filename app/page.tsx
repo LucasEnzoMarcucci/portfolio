@@ -35,7 +35,7 @@ const technologies = [
 const certifications = [
   {
     title: "Meta Front-End Developer Professional Certificate",
-    description: "Launch your career as a front-end developer. Build job-ready skills for an in-demand career and earn a credential from Meta. No degree or prior experience required to get started.",
+    description: "Ce certificat valide mes compétences en développement front-end, il est délivré par Meta et Coursera. Il couvre notamment des notions de base et avancées de React",
     image: Meta,
     link: "https://www.coursera.org/professional-certificates/meta-front-end-developer",
     tags: ["React", "Javascript", "Git", "Jest", "Figma"],
@@ -68,30 +68,33 @@ export default function Home() {
 
       <main className="container px-8 md:px-12 mx-auto">
         <section id="about" className="py-12 md:py-24 lg:py-28">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="flex flex-col items-center justify-center space-y-8 text-center">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-6">Développeur Full Stack</h1>
-              <p className="max-w-[800px] text-gray-500 md:text-xl mb-6">
-                Je m'appelle Lucas Marcucci, je suis un développeur axé sur le Full Stack qui aime développer des applications web, attaché à l’envie d’apprendre et d’innover entouré d’une bonne équipe.
+              <p className="max-w-[800px] text-gray-500 md:text-xl mb-6 text-justify">
+                Je m'appelle Lucas Marcucci, je suis un développeur Full Stack basé dans le sud de la France.
+                J'aime développer des applications web, mobiles ou autres en utilisant des technologies récentes et performantes.
+                J'apprends constamment de nouveaux concepts ou j'améliore mes compétences existantes pour prendre part à des projets.
+                Je recherche une offre pour le poste de développeur Frontend, Backend ou Full Stack. N'hésitez pas à me contacter si je correspond à vos critères.
               </p>
             </div>
 
             <div className="space-x-4">
               <Link href="https://github.com/LucasEnzoMarcucci" target="_blank">
-                <Button size="default">
-                  <Github className="h-6 w-6" />
+                <Button variant="outline" size="icon">
+                  <Github className="h-5 w-5" />
                   <span className="sr-only">GitHub</span>
                 </Button>
               </Link>
               <Link href="https://www.linkedin.com/in/lucas-marcucci/" target="_blank">
-                <Button size="default">
-                  <Linkedin className="h-4 w-4" />
+                <Button variant="outline" size="icon">
+                  <Linkedin className="h-5 w-5" />
                   <span className="sr-only">LinkedIn</span>
                 </Button>
               </Link>
               <a href="mailto:lucasenzomrc@gmail.com">
-                <Button size="default">
-                  <Mail className="h-4 w-4" />
+                <Button variant="outline" size="icon">
+                  <Mail className="h-5 w-5" />
                   <span className="sr-only">Email</span>
                 </Button>
               </a>

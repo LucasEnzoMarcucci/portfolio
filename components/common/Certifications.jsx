@@ -4,7 +4,7 @@ export default function ProjectCard({ certifications }) {
   return (
     <>
       {certifications.map((certification) => (
-        <div className="flex flex-col gap-20 py-12 first:pt-0 last:pb-0 sm:flex-row justify-center">
+        <div key={certification.title} className="flex flex-col gap-20 py-12 first:pt-0 last:pb-0 sm:flex-row justify-center">
           <Image alt={certification.title} src={certification.image} className="object-contain" width={300} />
           <div className="max-w-xl flex-auto">
             <h3 className="text-lg/8 font-semibold tracking-tight text-gray-900">{certification.title}</h3>
