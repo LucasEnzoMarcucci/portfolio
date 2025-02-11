@@ -1,27 +1,123 @@
-export default function Example() {
-  return (
-    <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <h2 className="text-center text-base/7 font-semibold text-indigo-600">Deploy faster</h2>
-        <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">
-          Everything you need to deploy your app
-        </p>
+import Link from "next/link"
+import Navbar from "@/components/common/Navbar"
+import Techstacks from "@/components/common/Techstacks"
+import Certifications from "@/components/common/Certifications"
+import ProjectCards from "@/components/common/ProjectCards"
+import { Button } from "@/components/ui/button"
+import { Github, Linkedin, Mail } from "lucide-react"
+import Meta from "@/public/Meta.svg"
+import UnrealEngine from "@/public/UnrealEngine.avif"
+import NoteTaker from "@/public/NoteTaker.jpg"
 
-        <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-          <div className="relative max-lg:row-start-1">
-            <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
-              <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Performance</p>
-                <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.
-                </p>
-              </div>
+const technologies = [
+  {
+    category: "Langages de programmation",
+    skills: ["React", "Javascript", "TypeScript", "Php", "Java", "Kotlin"],
+  },
+  {
+    category: "Frameworks",
+    skills: ["Nodejs", "Nextjs", "Laravel"],
+  },
+  {
+    category: "Gestion de données",
+    skills: ["MySQL", "MongoDB", "SQLite", "Sequelize", "Prisma"],
+  },
+  {
+    category: "DevOps",
+    skills: ["Docker", "CI/CD", "Git", "Jenkins"],
+  },
+  {
+    category: "Outils et autres",
+    skills: ["Agile", "Linux", "Jira", "Postman", "Swagger", "Jest"],
+  }
+]
+
+const certifications = [
+  {
+    title: "Meta Front-End Developer Professional Certificate",
+    description: "Launch your career as a front-end developer. Build job-ready skills for an in-demand career and earn a credential from Meta. No degree or prior experience required to get started.",
+    image: Meta,
+    link: "https://www.coursera.org/professional-certificates/meta-front-end-developer",
+    tags: ["React", "Javascript", "Git", "Jest", "Figma"],
+  }
+]
+
+const projects = [
+  {
+    title: "Développement d'un jeu vidéo indépendant",
+    description: "Je travail avec un ami sur un jeu multijoueur sur pc, nous avons commencé le développement en novembre 2024 et il sortira aux grands publics fin 2025.",
+    image: UnrealEngine,
+    link: "https://www.unrealengine.com/fr",
+    tags: ["Unreal Engine 5", "Blender", "Blueprint"],
+    showLink: false
+  },
+  {
+    title: "Développement d'une application de prise de notes open source",
+    description: "Je développe une application de prise de notes focalisée sur l'expérience utilisateur. Elle sert avant tout à mettre en place un vrai projet en suivant les bonnes pratiques de développement (DevOps).",
+    image: NoteTaker,
+    link: "https://github.com/LucasEnzoMarcucci/password-manager-app",
+    tags: ["Next.js", "Typescript", "Git", "Jest", "Docker", "PostgreSQL", "Shadcn", "Vercel"],
+    showLink: true
+  }
+]
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-background">
+      <Navbar />
+
+      <main className="container px-8 md:px-12 mx-auto">
+        <section id="about" className="py-12 md:py-24 lg:py-28">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-6">Développeur Full Stack</h1>
+              <p className="max-w-[800px] text-gray-500 md:text-xl mb-6">
+                Je m'appelle Lucas Marcucci, je suis un développeur axé sur le Full Stack qui aime développer des applications web, attaché à l’envie d’apprendre et d’innover entouré d’une bonne équipe.
+              </p>
             </div>
-            <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
+
+            <div className="space-x-4">
+              <Link href="https://github.com/LucasEnzoMarcucci" target="_blank">
+                <Button size="default">
+                  <Github className="h-6 w-6" />
+                  <span className="sr-only">GitHub</span>
+                </Button>
+              </Link>
+              <Link href="https://www.linkedin.com/in/lucas-marcucci/" target="_blank">
+                <Button size="default">
+                  <Linkedin className="h-4 w-4" />
+                  <span className="sr-only">LinkedIn</span>
+                </Button>
+              </Link>
+              <a href="mailto:lucasenzomrc@gmail.com">
+                <Button size="default">
+                  <Mail className="h-4 w-4" />
+                  <span className="sr-only">Email</span>
+                </Button>
+              </a>
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
+
+        <section id="techstack" className="py-12 md:py-24 lg:py-28">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-20 text-center">Stack Technique</h2>
+          <Techstacks technologies={technologies} />
+        </section>
+
+        <section id="certifications" className="py-12 md:py-24 lg:py-28">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">Certifications</h2>
+          <Certifications certifications={certifications} />
+        </section>
+
+        <section id="projects" className="py-12 md:py-24 lg:py-28">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-20 text-center">Projets en cours...</h2>
+          <ProjectCards projects={projects} />
+        </section>
+      </main>
+
+      <footer className="border-t py-6 w-full text-center">
+        <p className="text-xs text-gray-500">© 2025 <b>·</b> Lucas Marcucci <b>·</b> All rights reserved.</p>
+      </footer>
     </div>
   )
 }
