@@ -55,7 +55,7 @@ const projects = [
     title: "Développement d'une application de prise de notes open source",
     description: "Je développe une application de prise de notes focalisée sur l'expérience utilisateur. Elle sert avant tout à mettre en place un vrai projet en suivant les bonnes pratiques de développement (DevOps).",
     image: NoteTaker,
-    link: "https://github.com/LucasEnzoMarcucci/password-manager-app",
+    link: "https://github.com/LucasEnzoMarcucci/notetake-app",
     tags: ["Next.js", "Typescript", "Git", "Jest", "Docker", "PostgreSQL", "Shadcn", "Vercel"],
     showLink: true
   }
@@ -74,8 +74,8 @@ export default function Home() {
               <p className="max-w-[800px] text-gray-500 md:text-xl mb-6 text-justify">
                 Je m'appelle Lucas Marcucci, je suis un développeur Full Stack basé dans le sud de la France.
                 J'aime développer des applications web, mobiles ou autres en utilisant des technologies récentes et performantes.
-                J'apprends constamment de nouveaux concepts ou j'améliore mes compétences existantes pour prendre part à des projets.
-                Je recherche une offre pour le poste de développeur Frontend, Backend ou Full Stack. N'hésitez pas à me contacter si je correspond à vos critères.
+                J'apprends constamment de nouveaux concepts et j'améliore mes compétences existantes pour prendre part à des projets.
+                Je recherche une offre pour le poste d'ingénieur en développement Frontend, Backend ou Full Stack. N'hésitez pas à me contacter si je correspond à vos critères.
               </p>
             </div>
 
