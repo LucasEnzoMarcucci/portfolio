@@ -35,6 +35,7 @@ const technologies = [
 const certifications = [
   {
     title: "Meta Front-End Developer Professional Certificate",
+    date: "Janvier 2025",
     description: "Ce certificat valide mes compétences en développement front-end, il est délivré par Meta et Coursera. Il couvre notamment des notions de base et avancées de React",
     image: Meta,
     link: "https://www.coursera.org/professional-certificates/meta-front-end-developer",
@@ -45,7 +46,7 @@ const certifications = [
 const projects = [
   {
     title: "Développement d'un jeu vidéo indépendant",
-    description: "Je travail avec un ami sur un jeu multijoueur sur pc, nous avons commencé le développement en novembre 2024 et il sortira aux grands publics fin 2025.",
+    description: "Je travaille avec un partenaire sur un jeu multijoueur sur pc, nous avons commencé le développement en novembre 2024 et il sortira aux grands publics fin 2025.",
     image: UnrealEngine,
     link: "https://www.unrealengine.com/fr",
     tags: ["Unreal Engine 5", "Blender", "Blueprint"],
@@ -120,6 +121,7 @@ export default function Home() {
 
       <footer className="border-t py-6 w-full text-center">
         <p className="text-xs text-gray-500">© 2025 <b>·</b> Lucas Marcucci <b>·</b> All rights reserved.</p>
+        <a href="https://github.com/LucasEnzoMarcucci/portfolio" target="_blank" className="text-xs text-gray-500 mt-2 hover:underline">Code source du site</a>
       </footer>
     </div>
   )

@@ -11,6 +11,7 @@ export default function ProjectCard({ certifications }) {
             <Link href={certification.link}>
               <h3 className="text-lg/8 font-semibold tracking-tight text-gray-900">{certification.title}</h3>
             </Link>
+            <p className="text-base/5 font-semibold text-[#0081FB]">{certification.date}</p>
             <p className="my-4 text-base/7 text-gray-600">{certification.description}</p>
             <div className="flex flex-wrap gap-2">
               {certification.tags.map((tag) => (
