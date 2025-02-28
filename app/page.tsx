@@ -8,6 +8,7 @@ import { Github, Linkedin, Mail } from "lucide-react"
 import Meta from "@/public/Meta.svg"
 import UnrealEngine from "@/public/UnrealEngine.avif"
 import NoteTaker from "@/public/NoteTaker.jpg"
+import Versatyle from "@/public/Versatyle.png"
 
 const technologies = [
   {
@@ -20,11 +21,15 @@ const technologies = [
   },
   {
     category: "Gestion de données",
-    skills: ["MySQL", "MongoDB", "SQLite", "Sequelize", "Prisma"],
+    skills: ["MySQL", "MongoDB", "Supabase", "SQLite", "Sequelize", "Prisma"],
   },
   {
     category: "DevOps",
     skills: ["Docker", "CI/CD", "Git", "Jenkins"],
+  },
+  {
+    category: "Sécurité",
+    skills: ["JWT", "OAuth", "Zod"]
   },
   {
     category: "Outils et autres",
@@ -44,6 +49,13 @@ const certifications = [
 ]
 
 const projects = [
+  {
+    title: "Développement d'un Saas de gestion de boîte mail Google",
+    description: "Je travaille activement sur un Saas capable de gérer les boîte mail Google automatiquement. Ce service payant peut trier les mails dans des catégories personnalisées et sera disponible dans quelques semaines.",
+    image: Versatyle,
+    link: "",
+    tags: ["Next.js", "Typescript", "Supabase", "Gmail API", "OpenAI API", "Shadcn", "Zod", "Git", "Prisma", "Lemon Squeezy", "Vercel"]
+  },
   {
     title: "Développement d'un jeu vidéo indépendant",
     description: "Je travaille avec un partenaire sur un jeu multijoueur sur pc, nous avons commencé le développement en novembre 2024 et il sortira aux grands publics fin 2025.",
