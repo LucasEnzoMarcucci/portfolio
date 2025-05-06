@@ -3,23 +3,29 @@ import { Card } from "@/components/ui/card"
 
 export default function TechStack({ technologies }) {
   return (
-    <div className="grid gap-6 md:grid-cols-2">
-      {technologies.map((tech) => (
-        <Card key={tech.category} className="p-6">
-          <h3 className="text-2xl font-mono font-semibold mb-4">{tech.category}</h3>
-          <div className="flex flex-wrap gap-4">
-            {tech.skills.map((skill) => (
-              <Image
-                key={skill}
-                src={`/stackIcons/${skill}.svg`}
-                className="bg-[#1E2235] rounded-3xl"
-                width={70}
-                height={70}
-              />
-            ))}
-          </div>
-        </Card>
-      ))}
-    </div>
+    <section id="technologies" className="py-12 md:py-24 lg:py-28">
+      <p className="text-white text-xl font-semibold mb-6">Technologies maîtrisées :</p>
+      <div className="grid md:grid-cols-2 items-start">
+        {technologies.map((tech) => (
+          <Card key={tech.category} className="flex flex-col justify-between p-6 bg-transparent border-0 ">
+            <p className="text-base/7 text-white/80 mb-4">{tech.category}</p>
+            <div className="flex flex-wrap gap-4">
+              {tech.skills.map((skill) => (
+                <span key={skill} className="bg-[#1E2235] rounded-3xl">
+                  <Image
+                    key={skill}
+                    src={`/stackIcons/${skill}.svg`}
+                    className="object-contain aspect-square"
+                    width={70}
+                    height={70}
+                    alt={skill}
+                  />
+                </span>
+              ))}
+            </div>
+          </Card>
+        ))}
+      </div>
+    </section>
   )
 }
