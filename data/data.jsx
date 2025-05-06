@@ -52,7 +52,7 @@ export const cards = [
 export const technologies = [
   {
     category: "Langages de programmation",
-    skills: ["React", "TypeScript", "Javascript", "Php", "Java", "Kotlin"],
+    skills: ["React", "Typescript", "Javascript", "Php", "Java", "Kotlin"],
   },
   {
     category: "Frameworks",
@@ -68,7 +68,7 @@ export const technologies = [
   },
   {
     category: "Sécurité",
-    skills: ["JWT", "Auth0", "Zod"]
+    skills: ["Jwt", "Auth0", "Zod"]
   },
   {
     category: "Outils et autres",
