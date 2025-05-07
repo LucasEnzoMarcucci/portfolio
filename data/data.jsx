@@ -17,21 +17,21 @@ export const cards = [
     slug: "Technologies",
     isProject: false,
     icon: <Layers size={32} />,
-    background: "bg-[url(/backgrounds/TechStackBackground.png)]"
+    background: "bg-[url(/backgrounds/Playstation5.png)]"
   },
   {
     title: "Certifications",
     slug: "Certifications",
     isProject: false,
     icon: <Medal size={32} />,
-    background: "bg-[url(/backgrounds/CertificationsBackground.png)]"
+    background: "bg-[url(/backgrounds/Playstation5.png)]"
   },
   {
     title: "Saas de gestion de boîte mail Google",
     slug: "Saas",
     isProject: true,
     image: Versatyle,
-    background: "bg-[url(/backgrounds/Playstation5.png)]"
+    background: "bg-[url(/backgrounds/VersatyleBackground.png)]"
   },
   {
     title: "Développement d'un jeu vidéo indépendant",

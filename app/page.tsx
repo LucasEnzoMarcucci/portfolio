@@ -8,7 +8,7 @@ import { AboutMe } from "@/components/common/playstation/aboutme"
 import { Certifications } from "@/components/common/playstation/certifications"
 import { Restock } from "@/components/common/playstation/restock"
 import { Saas } from "@/components/common/playstation/saas"
-import TechStack from "@/components/common/TechstacksIcons"
+import TechStack from "@/components/common/playstation/tech-stacks"
 import { technologies } from "@/data/data"
 export default function Home() {
   const [time, setTime] = useState('')
